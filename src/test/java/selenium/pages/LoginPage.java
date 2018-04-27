@@ -18,24 +18,24 @@ public class LoginPage {
         loginButtonLocator = By.id("btnLogin");
     }
 
-    public void enterUsername(String username){
+    public void enterUsername(String username) {
         WebElement usernameTextBox = driver.findElement(usernameLocator);
         usernameTextBox.clear();
         usernameTextBox.sendKeys(username);
     }
 
-    public void enterPassword(String password){
+    public void enterPassword(String password) {
         WebElement passwordTextBox = driver.findElement(passwordLocator);
         passwordTextBox.clear();
         passwordTextBox.sendKeys(password);
     }
 
-    public void doLogin(){
+    public void doLogin() {
         WebElement loginButton = driver.findElement(loginButtonLocator);
         loginButton.click();
     }
 
-    public void login(String username, String password){
+    public void login(String username, String password) {
         enterUsername(username);
         enterPassword(password);
         doLogin();

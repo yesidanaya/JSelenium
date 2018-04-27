@@ -11,7 +11,7 @@ public class BaseTest {
     protected WebDriver driver;
 
     @Before
-    public void init(){
+    public void init() {
         System.setProperty("webdriver.chrome.driver", "D:\\Proyectos\\PySelenium\\first\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -19,12 +19,12 @@ public class BaseTest {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver.quit();
     }
 
-    public void navigateTo(String url){
+    public void navigateTo(String url) {
         driver.navigate().to(url);
     }
 }
